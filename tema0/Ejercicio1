@@ -1,7 +1,7 @@
 In this ejercicio, we are going to turn on the simple web server by terminal with python
 
 First, we have to install Python and execute this: 
-```python
-python3 -m http.server 8000
-```
+´´´bash
+python -m http.server 8000
+´´´
 Finally, we turn on the server and we can visualize in the web browser
