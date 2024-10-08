@@ -5,5 +5,4 @@ This repository contains activities of my module DAW.
 
 Ejercicio | Descripcion
 ----------|------------
-[Ejercicio 1](/tema0/ejercicio1) | Simple server with Python by terminal
-[Ejercicio 2](/tema0/ejercicio2) | Server with httpd
+[Ejercicio 1](/tema0/Ejercicio1) | Simple server with Python by terminal
