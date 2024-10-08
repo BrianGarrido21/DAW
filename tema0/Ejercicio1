@@ -6,8 +6,6 @@ Este ejemplo utiliza el servidor HTTP simple que viene incorporado con Python. P
 python -m http.server 8000
 
 
-#### **ejemplo-2/README.md**:
-
 
 # Ejemplo 2: Servidor HTTP desde el código fuente
 
