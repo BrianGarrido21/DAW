@@ -1,7 +1,6 @@
-In this ejercicio, we are going to turn on the simple web server by terminal with python
+# Ejemplo 1: Simple Web Server
 
-First, we have to install Python and execute this: 
+Este ejemplo utiliza el servidor HTTP simple que viene incorporado con Python. Para ejecutarlo, debes asegurarte de tener Python instalado y luego usar el siguiente comando:
 
+```bash
 python -m http.server 8000
-
-Finally, we turn on the server and we can visualize in the web browser
