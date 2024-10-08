@@ -4,7 +4,7 @@ Este ejemplo utiliza el servidor HTTP simple que viene incorporado con Python. P
 
 ```bash
 python -m http.server 8000
-
+```
 
 
 # Ejemplo 2: Servidor HTTP desde el código fuente
