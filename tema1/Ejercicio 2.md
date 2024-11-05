@@ -89,16 +89,42 @@ Es recomendable leer los siguientes documentos antes de comenzar:
       Redirect /prueba /prueba2
      ```
    - Guarda y reinicia Apache:
-    ```bash
+     ```bash
       sudo systemctl restart apache2
      ```
      
 7. **Redirigir solo una página específica en lugar de toda la carpeta**:
-   - Prueba a redirigir una sola página de `prueba` a `prueba2` usando una redirección específica.
-
-9. **Usar la directiva `UserDir`**:
-   - Activa y configura `UserDir` para permitir a los usuarios tener sus propios directorios accesibles a través del navegador.
-
+   - Abre el archivo `.htaccess` en el directorio prueba:
+     ```bash
+     sudo nano /var/www/html/prueba/.htaccess
+     ```
+   - Añade una redirección específica para una página (por ejemplo, pagina1.html):
+     ```apache
+     Redirect /prueba/pagina1.html /prueba2/index.html
+     ```
+    - Guarda y reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
+     
+8. **Usar la directiva `UserDir`**:
+   - Activa el módulo `userdir`:
+     ```bash
+      sudo a2enmod userdir
+     ```
+   - Reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
+   - Crea un directorio público `public_html` en el directorio `home` del usuario:
+     ```bash
+      mkdir ~/public_html
+     ```
+   - Crea una página de prueba en `public_html`:
+     ```bash
+      echo "<h1>Página de usuario</h1>" > ~/public_html/index.html
+     ```
+   - Ahora podrás acceder a la página con la URL: `http://localhost/~username/`, reemplazando username con tu nombre de usuario.
 10. **Usar la directiva `Alias` para redirigir a una carpeta dentro del directorio de usuario**:
    - Configura la directiva `Alias` en el archivo de configuración para apuntar a un directorio dentro de los directorios de usuario.
 
