@@ -68,15 +68,32 @@ Es recomendable leer los siguientes documentos antes de comenzar:
      ```
 
 5. **Crear directorios `prueba` y `prueba2` con páginas de prueba**:
-   - Crea los directorios `prueba` y `prueba2` en el directorio raíz del servidor web (`/var/www/html` en muchas distribuciones) e incluye un par de páginas en cada uno.
-
-7. **Redirigir el contenido de la carpeta `prueba` hacia `prueba2`**:
-   - Usa directivas de redirección en el archivo `.htaccess` o en la configuración del sitio para redirigir todas las solicitudes de `prueba` a `prueba2`:
-     ```apache
-     Redirect /prueba /prueba2
+   - Crea los directorios `prueba` y `prueba2` en el directorio raíz de Apache:
+     ```bash
+        sudo mkdir /var/www/html/prueba
+        sudo mkdir /var/www/html/prueba2
+     ```
+   - Crea una página de prueba en cada directorio:
+      ```bash
+       echo "<h1>Página de prueba 1 en carpeta prueba</h1>" | sudo tee /var/www/html/prueba/index.html
+       echo "<h1>Página de prueba 2 en carpeta prueba2</h1>" | sudo tee /var/www/html/prueba2/index.html
      ```
 
-8. **Redirigir solo una página específica en lugar de toda la carpeta**:
+6. **Redirigir el contenido de la carpeta `prueba` hacia `prueba2`**:
+   - Abre el archivo de configuración de Apache para el sitio o un archivo `.htaccess` en `/var/www/html/prueba/`:
+     ```bash
+     sudo nano /var/www/html/prueba/.htaccess
+     ```
+   - Añade la directiva de redirección:
+     ```apache
+      Redirect /prueba /prueba2
+     ```
+   - Guarda y reinicia Apache:
+    ```bash
+      sudo systemctl restart apache2
+     ```
+     
+7. **Redirigir solo una página específica en lugar de toda la carpeta**:
    - Prueba a redirigir una sola página de `prueba` a `prueba2` usando una redirección específica.
 
 9. **Usar la directiva `UserDir`**:
