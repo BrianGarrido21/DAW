@@ -48,35 +48,47 @@ sudo apt update
 ### Paso 2: Instalar Apache
 
 Instala Apache usando el siguiente comando:
+
 ```bash
 sudo apt install apache2
 ```
+
 Verifica que Apache esté funcionando. Abre un navegador web y accede a http://localhost/. Deberías ver la página de bienvenida de Apache.
 
 ### Paso 3: Instalar MySQL
 
 Instala MySQL ejecutando el comando:
+
 ```bash
 sudo apt install mysql-server
 ```
+
 Configura MySQL con el siguiente comando para asegurarte de que esté seguro:
+
 ```bash
 sudo mysql_secure_installation
 ```
+
 Sigue las instrucciones en pantalla para configurar una contraseña segura para MySQL y otros ajustes de seguridad.
 
 ### Paso 4: Instalar PHP
+
 ```bash
 sudo apt install php libapache2-mod-php php-mysql
 ```
+
 Verifica que PHP esté funcionando. Crea un archivo de prueba en la carpeta de Apache:
+
 ```bash
 sudo nano /var/www/html/info.php
 ```
+
 Escribe el siguiente código en el archivo info.php y guárdalo:
+
 ```php
 <?php
 phpinfo();
 ?>
 ```
+
 Prueba PHP. Abre un navegador y accede a http://localhost/info.php. Deberías ver una página con la configuración de PHP.
