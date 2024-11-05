@@ -13,45 +13,79 @@ Es recomendable leer los siguientes documentos antes de comenzar:
 ## Tareas a Realizar
 
 1. **Configurar Apache para que utilice el puerto 81 además del 80**:
+   - Abre el archivo de configuración de puertos de Apache:
+     ```bash
+     sudo nano /etc/apache2/ports.conf
+     ```
    - Modifica el archivo de configuración de Apache para añadir el puerto 81. Esto suele hacerse en el archivo `ports.conf` agregando la línea:
      ```apache
      Listen 81
      ```
-
+   - Guarda el archivo y cierra el editor.
+   - Reinicia Apache para aplicar los cambios:
+     ```bash
+      sudo systemctl restart apache2
+     ```
+     
 2. **Añadir el dominio “marisma.intranet” en el fichero `hosts`**:
+   - Abre el archivo `/etc/hosts`:
+     ```bash
+     sudo nano /etc/hosts
+     ```
    - Edita el archivo `/etc/hosts` y añade la siguiente línea:
      ```
      127.0.0.1 marisma.intranet
      ```
+   - Guarda y cierra el archivo.
 
 3. **Modificar la directiva `ServerTokens` para mostrar el nombre del producto**:
+   - Abre el archivo de configuración de Apache:
+     ```bash
+      sudo nano /etc/apache2/apache2.conf
+     ```
    - En el archivo de configuración principal (`apache2.conf` o `httpd.conf`), busca la directiva `ServerTokens` y modifícala para que muestre solo el nombre del producto:
      ```apache
      ServerTokens ProductOnly
      ```
+   - Guarda y cierra el archivo.
+   - Reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
 
 4. **Mostrar el pie de página de Apache en el navegador**:
-   - Habilita la directiva correspondiente en el archivo de configuración para visualizar el pie de página en las respuestas del servidor.
+   - Asegúrate de que la directiva `ServerSignature` esté configurada en On en el archivo de configuración:
+     ```bash
+      sudo nano /etc/apache2/apache2.conf
+     ```
+   - Añade o edita la siguiente línea:
+      ```apache
+      ServerSignature On
+     ```
+   - Guarda y reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
 
 5. **Crear directorios `prueba` y `prueba2` con páginas de prueba**:
    - Crea los directorios `prueba` y `prueba2` en el directorio raíz del servidor web (`/var/www/html` en muchas distribuciones) e incluye un par de páginas en cada uno.
 
-6. **Redirigir el contenido de la carpeta `prueba` hacia `prueba2`**:
+7. **Redirigir el contenido de la carpeta `prueba` hacia `prueba2`**:
    - Usa directivas de redirección en el archivo `.htaccess` o en la configuración del sitio para redirigir todas las solicitudes de `prueba` a `prueba2`:
      ```apache
      Redirect /prueba /prueba2
      ```
 
-7. **Redirigir solo una página específica en lugar de toda la carpeta**:
+8. **Redirigir solo una página específica en lugar de toda la carpeta**:
    - Prueba a redirigir una sola página de `prueba` a `prueba2` usando una redirección específica.
 
-8. **Usar la directiva `UserDir`**:
+9. **Usar la directiva `UserDir`**:
    - Activa y configura `UserDir` para permitir a los usuarios tener sus propios directorios accesibles a través del navegador.
 
-9. **Usar la directiva `Alias` para redirigir a una carpeta dentro del directorio de usuario**:
+10. **Usar la directiva `Alias` para redirigir a una carpeta dentro del directorio de usuario**:
    - Configura la directiva `Alias` en el archivo de configuración para apuntar a un directorio dentro de los directorios de usuario.
 
-10. **Directiva `Options` y verificación de la indexación de directorios en Apache**:
+11. **Directiva `Options` y verificación de la indexación de directorios en Apache**:
     - Investiga la función de la directiva `Options` y verifica si Apache está indexando directorios.
     - Para desactivar la indexación de directorios, utiliza la configuración:
       ```apache
