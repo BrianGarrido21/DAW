@@ -13,3 +13,16 @@ Si necesitas instalar algún módulo adicional en Apache, usa el comando `a2enmo
 sudo a2enmod userdir
 ```
 
+## Paso 1: Iniciar el servidor Apache
+Para iniciar el servidor Apache, usa el siguiente comando:
+```bash
+sudo systemctl start apache2
+```
+Verifica que Apache esté funcionando accediendo a http://localhost/ en tu navegador.
+
+## Paso 2: Configurar Apache para usar el puerto 81 además del 80
+
+#### 	1.	Abre el archivo de configuración de puertos:
+```bash
+sudo nano /etc/apache2/ports.conf
+```
