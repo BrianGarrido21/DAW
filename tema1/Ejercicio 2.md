@@ -26,3 +26,7 @@ Verifica que Apache esté funcionando accediendo a http://localhost/ en tu naveg
 ```bash
 sudo nano /etc/apache2/ports.conf
 ```
+####	2.	Añade el puerto 81 modificando o añadiendo la siguiente línea:
+```apache
+Listen 81
+```
