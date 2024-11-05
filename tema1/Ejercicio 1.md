@@ -66,6 +66,17 @@ sudo mysql_secure_installation
 Sigue las instrucciones en pantalla para configurar una contraseña segura para MySQL y otros ajustes de seguridad.
 
 ### Paso 4: Instalar PHP
-
-
-
+```bash
+sudo apt install php libapache2-mod-php php-mysql
+```
+Verifica que PHP esté funcionando. Crea un archivo de prueba en la carpeta de Apache:
+```bash
+sudo nano /var/www/html/info.php
+```
+Escribe el siguiente código en el archivo info.php y guárdalo:
+```php
+<?php
+phpinfo();
+?>
+```
+Prueba PHP. Abre un navegador y accede a http://localhost/info.php. Deberías ver una página con la configuración de PHP.
