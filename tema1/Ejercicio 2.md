@@ -125,12 +125,36 @@ Es recomendable leer los siguientes documentos antes de comenzar:
       echo "<h1>Página de usuario</h1>" > ~/public_html/index.html
      ```
    - Ahora podrás acceder a la página con la URL: `http://localhost/~username/`, reemplazando username con tu nombre de usuario.
-10. **Usar la directiva `Alias` para redirigir a una carpeta dentro del directorio de usuario**:
-   - Configura la directiva `Alias` en el archivo de configuración para apuntar a un directorio dentro de los directorios de usuario.
-
-11. **Directiva `Options` y verificación de la indexación de directorios en Apache**:
+     
+9. **Usar la directiva `Alias` para redirigir a una carpeta dentro del directorio de usuario**:
+   - Abre el archivo de configuración principal de Apache:
+   ```bash
+      sudo nano /etc/apache2/apache2.conf
+     ```
+   - Añade la directiva Alias para redirigir una ruta específica:
+     ```apache
+     Alias /alias /home/username/public_html/
+     ```
+   - Guarda y reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
+   - Ahora puedes acceder a este alias desde `http://localhost/alias`.
+   
+     
+10. **Directiva `Options` y verificación de la indexación de directorios en Apache**:
     - Investiga la función de la directiva `Options` y verifica si Apache está indexando directorios.
+      
+    - En el archivo de configuración de Apache o en `.htaccess`, busca o añade la directiva `Options` en el directorio que deseas configurar.
+      
     - Para desactivar la indexación de directorios, utiliza la configuración:
       ```apache
-      Options -Indexes
+      <Directory /var/www/html>
+          Options -Indexes
+      </Directory>
       ```
+   - Guarda y reinicia Apache:
+     ```bash
+      sudo systemctl restart apache2
+     ```
+   - Comprueba si Apache está indexando los directorios abriendo una URL sin un archivo especificado `(como http://localhost/prueba)`. Deberías ver un mensaje de acceso prohibido si Indexes está desactivado.
