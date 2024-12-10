@@ -24,11 +24,12 @@ EXIT;
 
 3. Extrae el archivo:
 
-![Screenshot 2024-12-10 at 17 22 24](https://github.com/user-attachments/assets/82285787-aff5-46a0-8214-c533bf4a62f4)
+![Screenshot 2024-12-10 at 17 22 41](https://github.com/user-attachments/assets/1f72fec8-5162-47f8-be7f-d02d4592215d)
 
+```bash
+cd /var/www/html
+```
 
-5. Mueve los archivos de WordPress al directorio raíz:
-
-6. Configura los permisos:
+6. Mueve los archivos de WordPress al directorio raíz y configura los permisos:
 
 ![Screenshot 2024-12-10 at 17 23 07](https://github.com/user-attachments/assets/16aa9108-d5a7-46ea-946a-620f02949fd8)
