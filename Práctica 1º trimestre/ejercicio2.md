@@ -33,3 +33,14 @@ cd /var/www/html
 6. Mueve los archivos de WordPress al directorio raíz y configura los permisos:
 
 ![Screenshot 2024-12-10 at 17 23 07](https://github.com/user-attachments/assets/16aa9108-d5a7-46ea-946a-620f02949fd8)
+
+7. Definimos la base de datos y hacemos paso a paso la instalación de Wordpres
+![Screenshot 2024-12-10 at 18 58 26](https://github.com/user-attachments/assets/bc90f21c-9208-4814-b8b6-859ace2f051c)
+![Screenshot 2024-12-10 at 19 03 48](https://github.com/user-attachments/assets/5fc9c03d-3756-422e-88db-d37eff28101a)
+![Screenshot 2024-12-10 at 19 05 16](https://github.com/user-attachments/assets/9f3e8d05-b87d-4553-bc26-6ba4774c1805)
+![Screenshot 2024-12-10 at 19 05 35](https://github.com/user-attachments/assets/85dbaa3e-8e6e-4b1b-9386-a5a008a4e746)
+![Screenshot 2024-12-10 at 19 05 52](https://github.com/user-attachments/assets/5a8aa919-f48e-4a8e-8a1f-ff550c6c3942)
+
+
+
+
