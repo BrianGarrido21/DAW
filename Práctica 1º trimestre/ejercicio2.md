@@ -17,7 +17,9 @@ EXIT;
 ## Paso 3: Descargar Wordpress
 
 1. Ve al directorio raíz del servidor web:
-
+```bash
+cd /var/www/html
+```
 2. Descarga WordPress:
 
 ![Screenshot 2024-12-10 at 17 22 24](https://github.com/user-attachments/assets/5108bc99-87cc-42b0-8bf4-8b0d5cc471ca)
@@ -26,9 +28,7 @@ EXIT;
 
 ![Screenshot 2024-12-10 at 17 22 41](https://github.com/user-attachments/assets/1f72fec8-5162-47f8-be7f-d02d4592215d)
 
-```bash
-cd /var/www/html
-```
+
 
 6. Mueve los archivos de WordPress al directorio raíz y configura los permisos:
 
