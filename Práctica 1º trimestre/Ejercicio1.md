@@ -39,6 +39,11 @@ Agrega las siguientes líneas al final del archivo, donde 127.0.0.1 es la direcc
 
 <img width="530" alt="Screenshot 2024-12-02 at 18 04 36" src="https://github.com/user-attachments/assets/ce85e706-f47c-4fc3-a3ea-cc9ae0daef09">
 
+## Paso 4: Instalar php y mysql
 
+Procedemos a instalar php y mysql:
 
+![Screenshot 2024-12-10 at 16 58 30](https://github.com/user-attachments/assets/e07e0b18-41cf-467c-a02f-492849c335a2)
+
+![Screenshot 2024-12-10 at 17 01 09](https://github.com/user-attachments/assets/34fb2f58-86ee-4ec6-98da-67b3c26293ea)
 
