@@ -36,7 +36,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hola mundo flask"
+    return "Hola Mundo Flask"
 
 if __name__ == '__main__':
     app.run()
