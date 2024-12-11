@@ -36,7 +36,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "¡Hola desde Flask! El módulo mod_wsgi funciona correctamente."
+    return "Hola mundo flask"
 
 if __name__ == '__main__':
     app.run()
