@@ -10,8 +10,8 @@ El módulo mod_wsgi es necesario para permitir la ejecución de aplicaciones Pyt
 ## Paso 2: Activar el módulo wsgi
 
 1. Activa el módulo en Apache:
-2. Reinicia Apache para aplicar los cambios:
 ![Screenshot 2024-12-10 at 19 13 18](https://github.com/user-attachments/assets/4a1a5be1-a80d-45ed-befd-c3edb33d9208)
+2. Reinicia Apache para aplicar los cambios:
 
 ## Paso 3: Configurar una aplicacición con python
 1. Descargar las librerias que vayas a utilizar.
